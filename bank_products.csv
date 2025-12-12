@@ -1,6 +1,0 @@
-product_id,product_name,bank,product_type,annual_fee,interest_rate,reward_type,reward_rate,category,eligibility,description
-1,Citi Custom Cash,Citi,credit_card,0,,cashback,5% on top category,everyday,general,Automatically earns 5% cashback on your top spending category each month
-2,Chase Freedom Unlimited,Chase,credit_card,0,,cashback,1.5% on all purchases,everyday,general,Flat-rate cashback card with no annual fee
-3,Bank of America Premium Rewards,Bank of America,credit_card,95,,travel,2x on travel & dining,travel,travelers,Points card with travel benefits and flexible rewards
-4,Citi Accelerate Savings,Citi,savings_account,,4.25,,,savings,general,High-yield savings account with competitive interest rate
-5,Chase Total Checking,Chase,checking_account,,0.01,,,checking,general,Everyday checking with online and mobile banking
