@@ -1,48 +1,52 @@
-﻿Name,Bank,Type,Interest_Rate_APY,Annual_Fee,Reward_or_Interest_Type,ATM_Access_Notes,Mobile_Check_Deposit_Support,Transfer_Methods,Foreign_Transaction_Fee,Notes
-Chase Sapphire Preferred,Chase,Credit Card,0%,95,Travel Points,Free ATM worldwide,Yes,Zelle,3%,Popular travel card
-Chase Freedom Unlimited,Chase,Credit Card,0%,0,Cashback,Local ATMs only,Yes,Zelle,3%,Flexible cashback card
-Chase Savings Plus,Chase,Savings Account,0.50%,0,N/A,Free ATM worldwide,Yes,ACH,0%,High yield savings
-Chase Total Checking,Chase,Checking Account,0.01%,0,N/A,Free ATMs,Yes,ACH,0%,Standard checking account
-Bank of America Travel Rewards,BoA,Credit Card,0%,0,Travel Points,Local ATMs only,Yes,Zelle,3%,No annual fee travel card
-Bank of America Cash Rewards,BoA,Credit Card,0%,0,Cashback,Free ATM worldwide,Yes,Zelle,3%,Best for cashback
-Bank of America Advantage Savings,BoA,Savings Account,0.50%,0,N/A,Local ATMs only,Yes,ACH,0%,Low minimum balance
-Bank of America Advantage Checking,BoA,Checking Account,0.01%,0,N/A,Free ATMs,Yes,ACH,0%,Standard account
-Wells Fargo Propel American Express,Wells Fargo,Credit Card,0%,0,Travel Points,Free ATM worldwide,Yes,Zelle,3%,No annual fee and good for rewards
-Wells Fargo Cash Wise Visa,Wells Fargo,Credit Card,0%,0,Cashback,Local ATMs only,Yes,Zelle,3%,Cashback on purchases
-Wells Fargo Platinum Savings,Wells Fargo,Savings Account,0.40%,0,N/A,Free ATMs,Yes,ACH,0%,Competitive APY
-Wells Fargo Everyday Checking,Wells Fargo,Checking Account,0.01%,0,N/A,Local ATMs only,Yes,ACH,0%,Basic checking account
-Citi Premier Card,Citi,Credit Card,0%,95,Travel Points,Free ATM worldwide,Yes,Zelle,3%,Great for travel rewards
-Citi Double Cash Card,Citi,Credit Card,0%,0,Cashback,Local ATMs only,Yes,Zelle,3%,Earn cashback on all purchases
-Citi Accelerate Savings,Citi,Savings Account,0.50%,0,N/A,Free ATMs,Yes,ACH,0%,High interest savings
-Citi Basic Checking,Citi,Checking Account,0.01%,0,N/A,Local ATMs only,Yes,ACH,0%,Standard checking account
-Chase Freedom Flex,Chase,Credit Card,0%,0,Cashback,Free ATMs,Yes,Zelle,3%,Rotating category cashback
-Chase Sapphire Reserve,Chase,Credit Card,0%,550,Travel Points,Free ATM worldwide,Yes,Zelle,3%,Premium travel card
-Chase Premier Savings,Chase,Savings Account,0.60%,0,N/A,Free ATMs,Yes,ACH,0%,Higher APY savings
-Chase Secure Checking,Chase,Checking Account,0.01%,0,N/A,Local ATMs only,Yes,ACH,0%,Basic checking
-Bank of America Premium Rewards,BoA,Credit Card,0%,95,Travel Points,Free ATM worldwide,Yes,Zelle,3%,Premium rewards card
-Bank of America Customized Cash Rewards,BoA,Credit Card,0%,0,Cashback,Local ATMs only,Yes,Zelle,3%,Customizable cashback
-Bank of America Platinum Savings,BoA,Savings Account,0.55%,0,N/A,Free ATMs,Yes,ACH,0%,High interest savings
-Bank of America SafeBalance Checking,BoA,Checking Account,0.01%,0,N/A,Local ATMs only,Yes,ACH,0%,No overdraft fees
-Wells Fargo Visa Signature,Wells Fargo,Credit Card,0%,0,Travel Points,Free ATM worldwide,Yes,Zelle,3%,Flexible travel rewards
-Wells Fargo Active Cash Card,Wells Fargo,Credit Card,0%,0,Cashback,Local ATMs only,Yes,Zelle,3%,Unlimited cashback
-Wells Fargo Platinum Savings Plus,Wells Fargo,Savings Account,0.45%,0,N/A,Free ATMs,Yes,ACH,0%,Higher APY
-Wells Fargo Opportunity Checking,Wells Fargo,Checking Account,0.01%,0,N/A,Local ATMs only,Yes,ACH,0%,No minimum balance
-Citi Rewards+,Citi,Credit Card,0%,0,Travel Points,Free ATM worldwide,Yes,Zelle,3%,Earn points on everyday purchases
-Citi Custom Cash Card,Citi,Credit Card,0%,0,Cashback,Local ATMs only,Yes,Zelle,3%,Flexible cashback
-Citi Accelerate Checking,Citi,Checking Account,0.01%,0,N/A,Local ATMs only,Yes,ACH,0%,Standard checking account
-Chase Ink Business Cash,Chase,Credit Card,0%,0,Cashback,Local ATMs only,Yes,Zelle,3%,Small business cashback
-Chase Ink Business Preferred,Chase,Credit Card,0%,95,Travel Points,Free ATM worldwide,Yes,Zelle,3%,Best for business travel
-Chase High Yield Savings,Chase,Savings Account,0.70%,0,N/A,Free ATMs,Yes,ACH,0%,High APY savings
-Chase Secure Plus Checking,Chase,Checking Account,0.01%,0,N/A,Local ATMs only,Yes,ACH,0%,No monthly fee
-Bank of America Travel Points Plus,BoA,Credit Card,0%,95,Travel Points,Free ATM worldwide,Yes,Zelle,3%,Extra travel rewards
-Bank of America Cash Rewards Plus,BoA,Credit Card,0%,0,Cashback,Local ATMs only,Yes,Zelle,3%,Better cashback
-Bank of America Advantage Savings Plus,BoA,Savings Account,0.60%,0,N/A,Free ATMs,Yes,ACH,0%,Competitive APY
-Bank of America Advantage Checking Plus,BoA,Checking Account,0.01%,0,N/A,Local ATMs only,Yes,ACH,0%,No monthly fee
-Wells Fargo Propel Rewards,Wells Fargo,Credit Card,0%,0,Travel Points,Free ATM worldwide,Yes,Zelle,3%,Great rewards for travel
-Wells Fargo Cash Wise,Wells Fargo,Credit Card,0%,0,Cashback,Local ATMs only,Yes,Zelle,3%,Unlimited cashback
-Wells Fargo Platinum Savings Max,Wells Fargo,Savings Account,0.50%,0,N/A,Free ATMs,Yes,ACH,0%,High APY
-Wells Fargo Everyday Checking,Wells Fargo,Checking Account,0.01%,0,N/A,Local ATMs only,Yes,ACH,0%,No monthly fee
-Citi Premier Rewards, CITI,Credit Card,0%,95,Travel Points,Free ATM worldwide,Yes,Zelle,3%,Best for travel
-Citi Double Cash Plus,CITI,Credit Card,0%,0,Cashback,Local ATMs only,Yes,Zelle,3%,High cashback
-Citi Accelerate Savings Plus,CITI,Savings Account,0.50%,0,N/A,Free ATMs,Yes,ACH,0%,High interest
-Citi Basic Checking Plus,CITI,Checking Account,0.01%,0,N/A,Local ATMs only,Yes,ACH,0%,No monthly fee
+﻿Name,Bank,Type,Interest_Rate_APY,Annual_Fee,Reward_or_Interest_Type,ATM_Access_Notes,Mobile_Check_Deposit_Support,Transfer_Methods
+Chase Sapphire Preferred,Chase,Credit Card,0%,95,Travel Points,N/A,N/A,N/A
+Chase Freedom Unlimited,Chase,Credit Card,0%,0,Cashback,N/A,N/A,N/A
+Chase Savings Plus,Chase,Savings Account,0.50%,0,N/A,Free ATM worldwide,Yes,ACH
+Chase Total Checking,Chase,Checking Account,0.01%,0,N/A,Free ATMs,Yes,Zelle
+Bank of America Travel Rewards,BoA,Credit Card,0%,0,Travel Points,N/A,N/A,N/A
+Bank of America Cash Rewards,BoA,Credit Card,0%,0,Cashback,N/A,N/A,N/A
+Bank of America Advantage Savings,BoA,Savings Account,0.50%,0,N/A,Local ATMs only,Yes,ACH
+Bank of America Advantage Checking,BoA,Checking Account,0.01%,0,N/A,Free ATMs,Yes,Zelle
+Wells Fargo Propel American Express,Wells Fargo,Credit Card,0%,0,Travel Points,N/A,N/A,N/A
+Wells Fargo Cash Wise Visa,Wells Fargo,Credit Card,0%,0,Cashback,N/A,N/A,N/A
+Wells Fargo Platinum Savings,Wells Fargo,Savings Account,0.40%,0,N/A,Free ATMs,Yes,ACH
+Wells Fargo Everyday Checking,Wells Fargo,Checking Account,0.01%,0,N/A,Local ATMs only,Yes,Zelle
+Citi Premier Card,Citi,Credit Card,0%,95,Travel Points,N/A,N/A,N/A
+Citi Double Cash Card,Citi,Credit Card,0%,0,Cashback,N/A,N/A,N/A
+Citi Accelerate Savings,Citi,Savings Account,0.50%,0,N/A,Free ATMs,Yes,ACH
+Citi Basic Checking,Citi,Checking Account,0.01%,0,N/A,Local ATMs only,Yes,Zelle
+Chase Freedom Flex,Chase,Credit Card,0%,0,Cashback,N/A,N/A,N/A
+Chase Sapphire Reserve,Chase,Credit Card,0%,550,Travel Points,N/A,N/A,N/A
+Chase Premier Savings,Chase,Savings Account,0.60%,0,N/A,Free ATMs,Yes,ACH
+Chase Secure Checking,Chase,Checking Account,0.01%,0,N/A,Local ATMs only,Yes,Zelle
+Bank of America Premium Rewards,BoA,Credit Card,0%,95,Travel Points,N/A,N/A,N/A
+Bank of America Customized Cash Rewards,BoA,Credit Card,0%,0,Cashback,N/A,N/A,N/A
+Bank of America Platinum Savings,BoA,Savings Account,0.55%,0,N/A,Free ATMs,Yes,ACH
+Bank of America SafeBalance Checking,BoA,Checking Account,0.01%,0,N/A,Local ATMs only,Yes,Zelle
+Wells Fargo Visa Signature,Wells Fargo,Credit Card,0%,0,Travel Points,N/A,N/A,N/A
+Wells Fargo Active Cash Card,Wells Fargo,Credit Card,0%,0,Cashback,N/A,N/A,N/A
+Wells Fargo Platinum Savings Plus,Wells Fargo,Savings Account,0.45%,0,N/A,Free ATMs,Yes,ACH
+Wells Fargo Opportunity Checking,Wells Fargo,Checking Account,0.01%,0,N/A,Local ATMs only,Yes,Zelle
+Citi Rewards+,Citi,Credit Card,0%,0,Travel Points,N/A,N/A,N/A
+Citi Custom Cash Card,Citi,Credit Card,0%,0,Cashback,N/A,N/A,N/A
+Citi Accelerate Checking,Citi,Checking Account,0.01%,0,N/A,Local ATMs only,Yes,Zelle
+Chase Ink Business Cash,Chase,Credit Card,0%,0,Cashback,N/A,N/A,N/A
+Chase Ink Business Preferred,Chase,Credit Card,0%,95,Travel Points,N/A,N/A,N/A
+Chase High Yield Savings,Chase,Savings Account,0.70%,0,N/A,Free ATMs,Yes,ACH
+Chase Secure Plus Checking,Chase,Checking Account,0.01%,0,N/A,Local ATMs only,Yes,Zelle
+Bank of America Travel Points Plus,BoA,Credit Card,0%,95,Travel Points,N/A,N/A,N/A
+Bank of America Cash Rewards Plus,BoA,Credit Card,0%,0,Cashback,N/A,N/A,N/A
+Bank of America Advantage Savings Plus,BoA,Savings Account,0.60%,0,N/A,Free ATMs,Yes,ACH
+Bank of America Advantage Checking Plus,BoA,Checking Account,0.01%,0,N/A,Local ATMs only,Yes,Zelle
+Wells Fargo Propel Rewards,Wells Fargo,Credit Card,0%,0,Travel Points,N/A,N/A,N/A
+Wells Fargo Cash Wise,Wells Fargo,Credit Card,0%,0,Cashback,N/A,N/A,N/A
+Wells Fargo Platinum Savings Max,Wells Fargo,Savings Account,0.50%,0,N/A,Free ATMs,Yes,ACH
+Citi Premier Rewards,CITI,Credit Card,0%,95,Travel Points,N/A,N/A,N/A
+Citi Double Cash Plus,CITI,Credit Card,0%,0,Cashback,N/A,N/A,N/A
+Citi Accelerate Savings Plus,CITI,Savings Account,0.50%,0,N/A,Free ATMs,Yes,ACH
+Citi Basic Checking Plus,CITI,Checking Account,0.01%,0,N/A,Local ATMs only,Yes,Zelle
+PNC Cash Rewards Visa,PNC,Credit Card,0%,0,Cashback,N/A,N/A,N/A
+PNC Core Visa Credit Card,PNC,Credit Card,0%,0,N/A,N/A,Yes,N/A
+PNC Virtual Wallet Spend,PNC,Checking Account,0.01%,0,N/A,Free ATMs,Yes,Zelle
+PNC Virtual Wallet Growth,PNC,Savings Account,0.40%,0,N/A,Free ATMs,Yes,ACH
+PNC Standard Savings,PNC,Savings Account,0.03%,0,N/A,Local ATMs only,Yes,ACH

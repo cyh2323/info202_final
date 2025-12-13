@@ -38,39 +38,71 @@ df["APY_num"] = df["Interest_Rate_APY"].apply(parse_apy)                    # Ad
 # ------------------------------
 st.sidebar.header("User Preferences & Goal Discovery")                      # Sidebar header
 
-goal = st.sidebar.radio(                                                    # User goal selection
+# ------------------------------
+# Sidebar – Product Type 선택
+# ------------------------------
+product_type = st.sidebar.selectbox(
+    "Select Product Type",
+    ["Credit Card", "Checking Account", "Savings Account"]
+)
+# Type 선택 후 filtered 초기화
+filtered = df[df["Type"] == product_type].copy()
+
+# ------------------------------
+# Sidebar – Goal Discovery (Type에 따라 옵션 변경)
+# ------------------------------
+if product_type == "Credit Card":
+    goal_options = ["None", "Travel Rewards", "Cashback Value", "Low-Fee Simplicity"]
+elif product_type == "Checking Account":
+    goal_options = ["None", "Low-Fee Simplicity"]
+elif product_type == "Savings Account":
+    goal_options = ["None", "Low-Fee Simplicity", "High-Yield Savings"]
+else:
+    goal_options = ["None"]
+
+# Goal 선택 – Type 변경 시 선택 초기화
+goal = st.sidebar.selectbox(
     "What is your main goal?",
-    ["Travel Rewards", "Cashback Value", "Low-Fee Simplicity", "High-Yield Savings"]
+    goal_options,
+    index=0  # 항상 첫 번째 옵션(None)으로 초기화
 )
 
 st.sidebar.subheader("Direct Filters")                                      # Section for direct filters
 
-max_fee = st.sidebar.number_input("Max Annual Fee ($)", min_value=0, value=100)    # Max annual fee
+# Type별 데이터 필터링
+# Type별 필터 분기
+if product_type == "Credit Card":
+    reward_options = filtered["Reward_or_Interest_Type"].dropna().unique().tolist()
+    selected_reward = st.sidebar.multiselect("Reward Type", sorted(reward_options))
+    
+    if selected_reward:
+        filtered = filtered[filtered["Reward_or_Interest_Type"].isin(selected_reward)]
 
-min_apy = st.sidebar.number_input(                                          # Minimum APY
-    "Minimum Interest Rate / APY (%)",
-    min_value=0.0,
-    value=0.0,
-    step=0.1,
-    format="%.2f"
-)
+elif product_type in ["Checking Account", "Savings Account"]:
+    min_apy = st.sidebar.number_input(
+        "Minimum Interest Rate / APY (%)",
+        min_value=0.0,
+        value=0.0,
+        step=0.1,
+        format="%.2f"
+    )
+    filtered = filtered[filtered["APY_num"] >= min_apy]
 
-reward_filter = st.sidebar.multiselect(                                     # Reward type filter
-    "Reward Type",
-    sorted(df['Reward_or_Interest_Type'].dropna().unique())
-)
+    atm_options = filtered["ATM_Access_Notes"].dropna().unique().tolist()
+    selected_atm = st.sidebar.multiselect("ATM Access", atm_options)
 
-# ------------------------------
-# Filtering Logic
-# ------------------------------
-filtered = df.copy()                                                        # Copy dataframe for filtering
+    mobile_options = filtered["Mobile_Check_Deposit_Support"].dropna().unique().tolist()
+    selected_mobile = st.sidebar.multiselect("Mobile / Check Deposit Support", mobile_options)
 
-filtered = filtered[filtered["Annual_Fee"] <= max_fee]                      # Annual Fee Filter
+    transfer_options = filtered["Transfer_Methods"].dropna().unique().tolist()
+    selected_transfer = st.sidebar.multiselect("Transfer Methods", transfer_options)
 
-filtered = filtered[filtered["APY_num"] >= min_apy]                         # Filter by min APY
- 
-if reward_filter:                                                           # Apply reward type filter
-    filtered = filtered[filtered["Reward_or_Interest_Type"].isin(reward_filter)]
+    if selected_atm:
+        filtered = filtered[filtered["ATM_Access_Notes"].isin(selected_atm)]
+    if selected_mobile:
+        filtered = filtered[filtered["Mobile_Check_Deposit_Support"].isin(selected_mobile)]
+    if selected_transfer:
+        filtered = filtered[filtered["Transfer_Methods"].isin(selected_transfer)]
 
 # Goal Discovery filtering
 if goal == "Travel Rewards":                                               
@@ -107,7 +139,7 @@ st.markdown(
 st.dataframe(
     filtered[
         ["Name", "Bank", "Type", "Interest_Rate_APY",
-         "Annual_Fee", "Reward_or_Interest_Type", "Notes"]
+         "Annual_Fee", "Reward_or_Interest_Type", "ATM_Access_Notes", "Mobile_Check_Deposit_Support", "Transfer_Methods"]
     ],
     use_container_width=True
 )
@@ -129,6 +161,6 @@ if compare_selection:                                                        # I
     st.table(
         compare_df[
             ["Name", "Bank", "Type", "Interest_Rate_APY",
-             "Annual_Fee", "Reward_or_Interest_Type", "Notes"]
+             "Annual_Fee", "Reward_or_Interest_Type", "ATM_Access_Notes", "Mobile_Check_Deposit_Support", "Transfer_Methods"]
         ]
     )
