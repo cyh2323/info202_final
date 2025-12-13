@@ -23,7 +23,7 @@ def parse_apy(rate_str):                                                    # Fu
             return 0.0
         rate_str = str(rate_str)
 
-        if "%" in rate_str:                                               # Handle single percentage
+        if "%" in rate_str:                                                 # Handle single percentage
             return float(rate_str.replace("%", "").strip())
         else:                                                               
             return float(rate_str.strip())
@@ -39,17 +39,17 @@ df["APY_num"] = df["Interest_Rate_APY"].apply(parse_apy)                    # Ad
 st.sidebar.header("User Preferences & Goal Discovery")                      # Sidebar header
 
 # ------------------------------
-# Sidebar – Product Type 선택
+# Sidebar – Product Type Selection
 # ------------------------------
 product_type = st.sidebar.selectbox(
     "Select Product Type",
     ["Credit Card", "Checking Account", "Savings Account"]
 )
-# Type 선택 후 filtered 초기화
-filtered = df[df["Type"] == product_type].copy()
+
+filtered = df[df["Type"] == product_type].copy()                            # Initialize the filtered dataset based on the selected product typ
 
 # ------------------------------
-# Sidebar – Goal Discovery (Type에 따라 옵션 변경)
+# Sidebar – Goal Discovery (Options depend on Product Type)
 # ------------------------------
 if product_type == "Credit Card":
     goal_options = ["None", "Travel Rewards", "Cashback Value", "Low-Fee Simplicity"]
@@ -60,43 +60,45 @@ elif product_type == "Savings Account":
 else:
     goal_options = ["None"]
 
-# Goal 선택 – Type 변경 시 선택 초기화
-goal = st.sidebar.selectbox(
+
+goal = st.sidebar.selectbox(                                                # Goal selection
     "What is your main goal?",
     goal_options,
-    index=0  # 항상 첫 번째 옵션(None)으로 초기화
+    index=0                                                                 # The goal is reset to "None" whenever the product type changes
 )
 
 st.sidebar.subheader("Direct Filters")                                      # Section for direct filters
 
-# Type별 데이터 필터링
-# Type별 필터 분기
-if product_type == "Credit Card":
+# ------------------------------
+# Type-Specific Filtering Logic
+# ------------------------------
+if product_type == "Credit Card":                                           # Credit cards are filtered primarily by reward type
     reward_options = filtered["Reward_or_Interest_Type"].dropna().unique().tolist()
     selected_reward = st.sidebar.multiselect("Reward Type", sorted(reward_options))
     
     if selected_reward:
         filtered = filtered[filtered["Reward_or_Interest_Type"].isin(selected_reward)]
 
-elif product_type in ["Checking Account", "Savings Account"]:
-    min_apy = st.sidebar.number_input(
+elif product_type in ["Checking Account", "Savings Account"]:               
+    min_apy = st.sidebar.number_input(                                      # Deposit accounts support interest-based filtering
         "Minimum Interest Rate / APY (%)",
         min_value=0.0,
         value=0.0,
         step=0.1,
         format="%.2f"
     )
-    filtered = filtered[filtered["APY_num"] >= min_apy]
+    filtered = filtered[filtered["APY_num"] >= min_apy]                     # Filter by minimum APY
 
-    atm_options = filtered["ATM_Access_Notes"].dropna().unique().tolist()
+    atm_options = filtered["ATM_Access_Notes"].dropna().unique().tolist()   # ATM access filter      
     selected_atm = st.sidebar.multiselect("ATM Access", atm_options)
 
-    mobile_options = filtered["Mobile_Check_Deposit_Support"].dropna().unique().tolist()
+    mobile_options = filtered["Mobile_Check_Deposit_Support"].dropna().unique().tolist()          # Mobile or check deposit support filter
     selected_mobile = st.sidebar.multiselect("Mobile / Check Deposit Support", mobile_options)
 
-    transfer_options = filtered["Transfer_Methods"].dropna().unique().tolist()
+    transfer_options = filtered["Transfer_Methods"].dropna().unique().tolist()                    # Transfer method filter (e.g., Zelle, ACH)
     selected_transfer = st.sidebar.multiselect("Transfer Methods", transfer_options)
 
+    # Apply deposit account–specific filters
     if selected_atm:
         filtered = filtered[filtered["ATM_Access_Notes"].isin(selected_atm)]
     if selected_mobile:
@@ -104,7 +106,10 @@ elif product_type in ["Checking Account", "Savings Account"]:
     if selected_transfer:
         filtered = filtered[filtered["Transfer_Methods"].isin(selected_transfer)]
 
-# Goal Discovery filtering
+# ------------------------------
+# Goal Discovery Filtering (Rule-Based)
+# ------------------------------
+# Apply additional filtering rules based on the selected user goal
 if goal == "Travel Rewards":                                               
     filtered = filtered[
         filtered["Reward_or_Interest_Type"]
